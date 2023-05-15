@@ -1,0 +1,207 @@
+body {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(30,168,240,255);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    flex-direction: row;
+}
+
+main {
+    padding: 2rem;
+    min-height: 100%;
+    flex-direction: column;
+    
+}
+
+footer {
+    background-color: rgba(30,168,240,255);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+#sidebarBtn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 1rem;
+    padding-right: 18px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+    background-color: #555;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    padding-right: 17px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.closebtn:hover {
+    color: white;
+}
+
+.content {
+    transition: margin-left 0.3s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.content-shrink {
+    margin-left: 250px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.image-container {
+    position: relative;
+    width: calc(25% - 1rem);
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    max-height: inherit;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed;
+     z-index: 1; 
+    padding-top: 0;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    max-width: 60%;
+    max-height: 60%;
+    position: fixed;
+    top: 20%;
+    left:29%;
+    transform: translate(0%, 0%);
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding:10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .image-container {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .image-container {
+        width: 100%;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>JUIT Gallery</title>
+</head>
+
+<body>
+    <header>
+        <h1><button id="sidebarBtn">☰</button>JUIT Gallery</h1>
+    </header>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" id="closeSidebarBtn">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Support</a>
+        <a href="#">FAQs</a>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="image-container">
+                <img src="images/1.jpg" alt="Image 1" class="image">
+            </div>
+            <div class="image-container">
+                <img src="images/2.jpg" alt="Image 2" class="image">
+            </div>
+            <div class="image-container">
+                <img src="images/3.jpg" alt="Image 3" class="image">
+            </div>
+            <div class="image-container">
+                <img src="images/4.jpg" alt="Image 4" class="image">
+            </div>
+        </div>
+        <div class="row">
+            <div class="image-container">
+                <img src="images/5.jpg" alt="Image 5" class="image">
+            </div>
+            <div class="image-container">
+                <img src="images/6.jpg" alt="Image 6" class="image">
+            </div>
+            <div class="image-container">
+                <img src="images/7.jpg" alt="Image 7" class="image">
+            </div>
+            <div class="image-container">
+                <img src="images/8.jpg" alt="Image 8" class="image">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 JUIT Gallery. All rights reserved.</p>
+    </footer>
+    <script src="opener.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

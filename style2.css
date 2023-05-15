@@ -1,0 +1,151 @@
+body {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(30,168,240,255);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    flex-direction: row;
+}
+
+main {
+    padding: 2rem;
+    min-height: 100%;
+    flex-direction: column;
+
+}
+
+.folder-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 20px;
+}
+
+.folder {
+    position: relative;
+    width: 400px;
+    height: 220px;
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.438);
+    padding: 1rem;
+    background-size: cover;
+    border-radius: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    margin-right: 10px;
+    -webkit-filter: brightness(100%);
+}
+
+.folder div{
+  position: absolute;
+  text-align: center;
+  padding: 100px 0;
+  font-size: 25px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(17, 30, 37, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+}
+
+.folder:hover{
+    cursor: pointer;
+}
+
+.folder:hover div{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* .folder:hover {
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+  } */
+
+.folder img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+#sidebarBtn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 1rem;
+    padding-right: 18px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+    background-color: #555;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    padding-right: 17px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.closebtn:hover {
+    color: white;
+}
+
+.content {
+    transition: margin-left 0.3s;
+}
+
+.content-shrink {
+    margin-left: 250px;
+}
+
+footer {
+    background-color: rgba(30,168,240,255);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
